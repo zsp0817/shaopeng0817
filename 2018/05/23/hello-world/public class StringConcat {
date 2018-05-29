@@ -1,0 +1,7 @@
+public class StringConcat {
+	
+	public static void main(String[] args) {
+		String str = "aa" + "bb" + "cc";
+		System.out.println("MY String: " + str);
+	}
+}
