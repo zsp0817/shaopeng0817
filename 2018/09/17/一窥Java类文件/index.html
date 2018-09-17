@@ -3,21 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Zsp‘s Blogs</title>
+  <title>一窥Java类文件 | Zsp‘s Blogs</title>
 
   
   <meta name="author" content="少鹏">
   
 
   
+  <meta name="description" content="背景学习Java的都知道，代码会被编译成class文件在JVM中执行，但我们很少去想：这个class文件的内容是什么？
+实践以如下的一个Java文件为例：
+1234567891011public class Foo &amp;#123;	private static final int MAX_COUNT ">
+  
 
+  
+  
+  <meta name="keywords" content="javap">
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  
+  <meta property="og:title" content="一窥Java类文件"/>
 
   <meta property="og:site_name" content="Zsp‘s Blogs"/>
 
@@ -54,12 +61,11 @@
 </header>
 
     <main class="site-main posts-loop">
-    
-  <article>
+    <article>
 
   
     
-    <h3 class="article-title"><a href="/2018/09/17/一窥Java类文件/"><span>一窥Java类文件</span></a></h3>
+    <h3 class="article-title"><span>一窥Java类文件</span></h3>
     
   
 
@@ -112,237 +118,6 @@
 </article>
 
 
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2018/08/12/在阿里ECS上安装MySQL/"><span>在阿里ECS上安装MySQL</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/08/12/在阿里ECS上安装MySQL/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-08-12T08:26:52.000Z">
-          2018-08-12
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2018/08/12/将Maven项目构建成多模块/"><span>将Maven项目构建成多模块</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/08/12/将Maven项目构建成多模块/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-08-12T08:14:16.000Z">
-          2018-08-12
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在实施微服务的过程中，总会涉及到服务间的调用，而这必定会导致某些类在服务A和服务B中同时存在，但这不是一个好的实践。正确的做法，是将服务拆分成多个模块，通过maven依赖的方式，让两个服务同时引入。<br>这篇文章纯粹是想记录下这个改造过程中的一些关键步骤，仅此而已。</p>
-<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><ol>
-<li><p>将项目打包方式由原来的jar或war改成pom，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;packaging&gt;pom&lt;/packaging&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用intellij，在项目上右键New-&gt;Module创建出子模块</p>
-</li>
-<li>把项目代码和依赖分别迁移到子模块里</li>
-</ol>
-<p>Over~</p>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/maven/">maven</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2018/05/26/使用GitHub和Hexo搭建博客/"><span>使用GitHub和Hexo免费搭建个人博客</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/05/26/使用GitHub和Hexo搭建博客/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-05-26T03:03:27.000Z">
-          2018-05-26
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p>自学的最好方式，就是授人以渔。为了达到这个目的，必须去深入的理解技术的细节，而博客就是一个很好的汇总方式，所以就有了搭建博客的想法。<br>搭建博客有很多种方式，这里我采用了GitHub+Hexo，这种方式很简单，基本鼓捣一会都能实现。<br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>是一个快速、简洁且高效的博客框架，使用Markdown来编写博客，省去了样式上的烦恼。</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
-<li>注册GitHub账号  </li>
-<li>安装Git  </li>
-<li>安装Node.js  </li>
-</ol>
-<h2 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a>使用Hexo</h2><p>安装好Node.js后，使用自带的npm安装Hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli  </span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>选择任意目录，用如下命令创建博客文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"># 生成基础文件</span><br><span class="line">hexo generate</span><br><span class="line"># 本地启动博客服务，在4000端口查看</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
-<h2 id="在GitHub上创建Repository"><a href="#在GitHub上创建Repository" class="headerlink" title="在GitHub上创建Repository"></a>在GitHub上创建Repository</h2><p>Repository Name必须填写yourname.github.io，如zsp.github.io，而这个以后就是你博客的域名</p>
-<h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">title: 博客主标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 网页描述</span><br><span class="line">author: 作者名</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: Asia/Shanghai</span><br><span class="line"></span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/zsp/zsp.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h2 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h2><p>生成文章，在source目录下，用Markdown语言编写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;测试文章&quot;</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
-<p>确认文章可发布后，发布到GitHub上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h4 id="至此，你就有了一个属于自己的博客，并发表了一篇亲手写的文章咯"><a href="#至此，你就有了一个属于自己的博客，并发表了一篇亲手写的文章咯" class="headerlink" title="至此，你就有了一个属于自己的博客，并发表了一篇亲手写的文章咯~~~"></a>至此，你就有了一个属于自己的博客，并发表了一篇亲手写的文章咯~~~</h4>
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/GitHub-Hexo/">GitHub, Hexo</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2018/05/23/hello-world/"><span>Hello World</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/05/23/hello-world/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-05-23T08:27:29.986Z">
-          2018-05-23
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-
-<nav class="pagination">
-  
-  
-</nav>
     </main>
 
     <footer class="site-footer">
